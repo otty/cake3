@@ -141,6 +141,8 @@ project "XMap2"
 		targetname  "xmap2"
 		links
 		{
+			"dl",
+			"pthread",
 			"GL",
 			"GLU",
 		}

@@ -374,6 +374,8 @@ project "XreaL"
 			--"libcurl",
 			"X11",
 			"openal",
+			"dl",
+			"pthread",
 		}
 	
 	configuration { "linux", "x32" }
@@ -584,6 +586,7 @@ project "XreaL-dedicated"
 		--}
 		links
 		{
+			"pthread",
 			"dl",
 			"m",
 		}
