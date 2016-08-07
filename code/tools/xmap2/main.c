@@ -1831,6 +1831,7 @@ int main(int argc, char **argv)
 	Sys_Printf("q3map          - v1.0r (c) 1999-2006 Id Software Inc.\n");
 	Sys_Printf("q3map2 (ydnar) - v2.5.16\n");
 	Sys_Printf("xmap2  (Tr3B)  - v" Q3MAP_VERSION "\n");
+	Sys_Printf("xmap2 - nav  (otty)  - v" Q3MAP_VERSION_NAV "\n");
 //  Sys_Printf("GtkRadiant    - v" RADIANT_VERSION " " __DATE__ " " __TIME__ "\n");
 
 	/* ydnar: new path initialization */
@@ -1883,6 +1884,10 @@ int main(int argc, char **argv)
 	/* ydnar: bsp conversion */
 	else if(!strcmp(argv[1], "-convert"))
 		r = ConvertBSPMain(argc - 1, argv + 1);
+
+	/* otty: nav */
+	else if(!strcmp(argv[1], "-nav"))
+		r = NavMain(argc - 1, argv + 1);
 
 	/* Tr3B: map conversion */
 	else if(!strcmp(argv[1], "-map2map"))

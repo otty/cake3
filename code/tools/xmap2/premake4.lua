@@ -25,6 +25,8 @@ project "XMap2"
 		"../../libs/png/**.c", "../../../libs/png/**.h",
 		"../../libs/zlib/**.c", "../../../libs/zlib/**.h",
 		--"../libs/openexr/**.cpp", "../../libs/openexr/**.h",
+
+		"../../libs/recast/**.cpp", "../../../libs/recast/**.h",
 	}
 	includedirs
 	{
@@ -32,6 +34,7 @@ project "XMap2"
 		"../../libs/picomodel",
 		"../../libs/png",
 		"../../libs/zlib",
+		"../../libs/recast",
 	}
 	defines
 	{ 

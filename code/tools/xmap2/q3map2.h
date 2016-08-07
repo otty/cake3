@@ -36,6 +36,7 @@ several games based on the Quake III Arena engine, in the form of "Q3Map2."
 
 /* version */
 #define Q3MAP_VERSION	"0.9.0"
+#define Q3MAP_VERSION_NAV	"0.9.0-nv-0001"
 
 
 
@@ -1002,7 +1003,7 @@ typedef enum
 }
 surfaceType_t;
 
-char           *surfaceTypes[NUM_SURFACE_TYPES]
+extern char           *surfaceTypes[NUM_SURFACE_TYPES]
 #ifndef MAIN_C
                ;
 #else
@@ -1600,6 +1601,8 @@ int             PlaneTypeForNormal(vec3_t normal);
 void            AddBrushBevels(void);
 brush_t        *FinishBrush(void);
 
+/* otty: nav.c */
+int             NavMain(int argc, char **argv);
 
 /* portals.c */
 winding_t      *BaseWindingForNode(node_t * node);
