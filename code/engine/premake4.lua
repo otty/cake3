@@ -372,6 +372,7 @@ project "XreaL"
 		links
 		{
 			--"libcurl",
+			"X11",
 			"openal",
 		}
 	
