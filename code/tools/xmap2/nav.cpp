@@ -32,7 +32,7 @@ extern "C"
 }
 
 #include "Recast.h"
-#include "../../shared/aas.h"
+#include "../../shared/nav.h"
 
 class rcContext context(false);
 

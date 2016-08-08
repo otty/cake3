@@ -4,70 +4,13 @@
 
 RAW NAVMESH DATA BASED ON RECASTS NAVMESH GENERATION
 
+
+ TODO: clean this up!
 ==============================================================
 */
 #ifndef __AAS
 #define __AAS
-#define	NAVMESH_MAGIC	0x1337
 
-/* should be the same as in rest of engine */
-#ifndef STEPSIZE
-#define	STEPSIZE		18.f
-#endif
-#ifndef DEFAULT_VIEWHEIGHT
-#define	DEFAULT_VIEWHEIGHT		32
-#endif
-#ifndef MINWIDTH
-#define	MINWIDTH		36
-#endif
-#ifndef INVALID
-#define INVALID -1
-#endif
-
-/* recast to quake transitions */
-#define recast2quake(a,b)((b)[0]=-(a)[0], (b)[1]=-(a)[2], (b)[2]=(a)[1])
-//#define quake2recast(a,b)((b)[0]=-(a)[0], (b)[1]=(a)[2], (b)[2]=-(a)[1])
-
-enum RecastPolyAreas
-{
-	RECAST_POLYAREA_GROUND
-};
-enum RecastPolyFlags
-{
-	RECAST_POLYFLAGS_WALK		= 0x01
-};
-
-#define MAX_NAV_EDGES 8192
-typedef struct
-{
-	vec3_t pos[2];
-	short unsigned type;	
-} navEdge_t;
-extern navEdge_t navEdges[MAX_NAV_EDGES];
-extern int 	num_navEdges;
-
-#define MAX_NAV_TRIANGLES 8192
-typedef struct
-{
-	vec3_t pos[3];
-	short unsigned area;	
-} navTriangle_t;
-extern navTriangle_t navTriangles[MAX_NAV_TRIANGLES];
-extern int 	num_navTriangles;
-
-#define MAX_NAV_REGULARS 8192
-typedef struct
-{
-	vec3_t pos;
-	short unsigned type;
-	short unsigned area;
-} navRegular_t;
-extern navRegular_t navRegulars[MAX_NAV_REGULARS];
-extern int 	num_navRegulars;
-
-
-	
-	
 void AAS_NavMeshInit( void );
 
 /*
@@ -80,8 +23,6 @@ AREA AWARENESS SYSTEM DATA
 #define MAX_AAS_NODES 8192
 #define MAX_AAS_LINKS_PER_NODE 32
 
-#define OUTER 0
-#define INNER 1
 
 typedef struct  {
 	//qboolean valid; // if link is suitable for navigation, set to true
@@ -135,8 +76,7 @@ PATHFINDING TOOLS
 #define OPEN 1
 #define CLOSED 2
 
-
-typedef struct 
+typedef struct
 {
 	int nodes[MAX_AAS_PATH];
 	int num_nodes;
@@ -153,7 +93,5 @@ extern int nodeList[MAX_AAS_NODES];
 extern aasNode_t *startNode;
 extern aasNode_t *endNode;
 extern aasPath_t testPath;
-
-
 
 #endif
