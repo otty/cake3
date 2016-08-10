@@ -54,13 +54,14 @@ extern int 	num_aasNodes;
 
 extern unsigned short aasLinearDist[MAX_AAS_NODES][MAX_AAS_NODES];
 
-
+/*
 void AAS_Init( qboolean build  );
 void AAS_NodeInit( void );
 void AAS_LinkNodes( void );
 void AAS_NodeLinearDist( void );
 void AAS_AreaLinks( void );
 void AAS_NodeOpenness( void );
+*/
 
 /*
 ==============================================================
@@ -69,7 +70,7 @@ PATHFINDING TOOLS
 
 ==============================================================
 */
-
+/*
 #define MAX_AAS_PATH 8192
 
 #define UNKNOWN 0
@@ -93,5 +94,5 @@ extern int nodeList[MAX_AAS_NODES];
 extern aasNode_t *startNode;
 extern aasNode_t *endNode;
 extern aasPath_t testPath;
-
+*/
 #endif

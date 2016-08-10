@@ -1,0 +1,43 @@
+# ignore build
+bin
+
+# wip: ignore base
+base
+
+# ignore base build
+base/cgamex86_64.so
+base/qagamex86_64.so
+base/uix86_64.so
+
+# ignore CLion IDE files
+.idea
+
+# ignore build files for gmake
+CMakeLists.txt
+Makefile
+
+base/code/cgame/Makefile
+base/code/cgame/obj/
+
+base/code/game/Makefile
+base/code/game/obj/
+
+base/code/ui/Makefile
+base/code/ui/obj/
+
+code/engine/XreaL-dedicated.make
+code/engine/XreaL.make
+code/engine/obj/
+
+code/tools/master/Makefile
+code/tools/master/obj/
+
+code/tools/xmap/Makefile
+code/tools/xmap/obj/
+
+code/tools/xmap2/Makefile
+code/tools/xmap2/obj/
+
+code/tools/navc/Makefile
+code/tools/navc/obj/
+

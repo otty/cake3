@@ -80,5 +80,7 @@ include "base/code/cgame"
 include "base/code/ui"
 
 -- tools
+include "code/tools/navc"
+--include "code/tools/xmap"
 include "code/tools/xmap2"
 include "code/tools/master"
